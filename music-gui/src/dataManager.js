@@ -1,0 +1,2 @@
+
+export default {homeBase: "http://"+window.location.hostname+"/", wsHomeBase: "ws://"+window.location.hostname+"/", socket: null, page: "load", "app": null, "dontLoadDefault": true, queue: [], percentage: 0, canManage: false, playing: false};

@@ -1,0 +1,27 @@
+{
+  "name": "hurricane",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cp config/dev.config.json.example config/config.json && export BB_TEST=true&& node index.js"
+  },
+  "author": "IDevJoe",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bulma": "^0.4.1",
+    "cookie-parser": "^1.4.3",
+    "discord.js": "^11.1.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-ws": "^3.0.0",
+    "htmlencode": "0.0.4",
+    "morgan": "^1.8.1",
+    "needle": "^1.6.0",
+    "node-snowflake": "0.0.1",
+    "on-finished": "^2.3.0",
+    "opusscript": "0.0.3",
+    "ytdl-core": "^0.14.2"
+  }
+}

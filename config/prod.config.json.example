@@ -1,0 +1,11 @@
+{
+  "token": "bot_token",
+  "web_port": 8010,
+  "discordbots_api": "bots.discord.pw key",
+  "version": "1",
+  "discord_secret": "bot_secret",
+  "googleKey": "google_key",
+  "event_webhook": "event_webhook",
+  "managers": ["manager1", "manager2"],
+  "developers": ["dev1", "dev2"]
+}

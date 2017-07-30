@@ -1,0 +1,11 @@
+{
+  "token": "bot_token",
+  "web_port": 8015,
+  "test_bot": true,
+  "version": "Staging",
+  "discord_secret": "bot_secret",
+  "googleKey": "google_key",
+  "event_webhook": "event_webhook",
+  "managers": ["your_id"],
+  "developers": ["your_id"]
+}
