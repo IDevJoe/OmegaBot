@@ -33,12 +33,8 @@ After completing that, run it to ensure that it starts.
 
 Hurricane management is done through a tool named the `Hurricane Management Console`. It is done this way so that management commands don't clutter the help menu.
 
-To download this, click [here](https://bitbucket.org/JoeTheDev/hurricanebeta/downloads/HMC.zip) and you will be given the latest version.
+To download this, click here (Soon(TM)) and you will be given the latest version.
 
 **Managing development instances**
 
 Currently, the HMC does not have an option to switch IP Addressess. This is planned, however, it is not at the top of our list.
-
-## Updating Hurricane
-
-The master branch is protected. Therefor, you will need to create new branches and create PRs for those branches. Once approved and merged, Hurricane will automatically update itself, so you won't need to shut it down.
