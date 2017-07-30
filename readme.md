@@ -1,6 +1,6 @@
-# HurricaneBeta
+# Omega
 
-The home of Hurricane's source code.
+The home of Omega's source code.
 
 ## New Developers Setup Guide
 
