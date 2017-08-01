@@ -16,10 +16,10 @@ class commandHelp extends hurricaneCommand {
             cmds.forEach((cmd) => {
                 if(!cmd.live) {
                     if(Permissions.isDev(message.author)) {
-                        embed.addField("..\\"+cmd.name, "**Not Live**\n"+cmd.description+"\n**Correct Usage:** ..\\"+cmd.name+" "+cmd.syntax, false);
+                        embed.addField("!-!"+cmd.name, "**Not Live**\n"+cmd.description+"\n**Correct Usage:** !-!"+cmd.name+" "+cmd.syntax, false);
                     }
                 } else {
-                    embed.addField("..\\"+cmd.name, cmd.description+"\n**Correct Usage:** ..\\"+cmd.name+" "+cmd.syntax, false);
+                    embed.addField("!-!"+cmd.name, cmd.description+"\n**Correct Usage:** !-!"+cmd.name+" "+cmd.syntax, false);
                 }
 
             });

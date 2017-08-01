@@ -23,6 +23,9 @@ const APIManager = require('./APIManager');
 const MusicManager = require('./MusicManager');
 const htmlencode = require('htmlencode');
 const cookieparser = require('cookie-parser');
+const expressws = require('express-ws');
+
+expressws(expapp);
 
 expapp.set('x-powered-by', false);
 expapp.set('view engine', 'ejs');
@@ -63,8 +66,8 @@ expapp.use('/api', (req, res, next) => {
 
 process.on('uncaughtException', function(err) {
     console.log('Uncaught exception: ' + err);
-    needle.post(config.event_webhook, {content: "@everyone\n**UNCAUGHT EXCEPTION**\nHurricane cannot continue\n\n```\n"+err.stack+"```"}, {json: true}, () => {
-        console.error("Hurricane will now exit.");
+    needle.post(config.event_webhook, {content: "@everyone\n**UNCAUGHT EXCEPTION**\nOmega cannot continue\n\n```\n"+err.stack+"```"}, {json: true}, () => {
+        console.error("Omega will now exit.");
         process.exit(1);
     });
 });
@@ -223,12 +226,12 @@ if(!(fs.existsSync(path.join(__dirname, "data", "askstaff.json"))))
 disc_client.on('ready', () => {
     if(first_ready) console.log("Connected and authenticated with Discord.");
     first_ready = false;
-    disc_client.user.setPresence({game: {name: "Hurricane v"+config.version+" | ..\\help"}})
+    disc_client.user.setPresence({game: {name: "Omega v"+config.version+" // !-!help"}})
 });
 
 disc_client.on('guildCreate', (guild) => {
     eventlog_joinLeave(true, guild);
-    guild.defaultChannel.send('Hi there!\nI\'m Hurricane, a bot with many commands. You can see my many commands by typing `..\\help` in any chat.\nFeel free to visit my Discord server, where we post changelogs and other cool things (We also offer support here): '+Strings.SERVER_INVITE)
+    guild.defaultChannel.send(Strings.HELLO+' '+Strings.SERVER_INVITE)
 });
 disc_client.on('guildDelete', (guild) => {
     eventlog_joinLeave(false, guild);
@@ -237,7 +240,7 @@ disc_client.on('guildDelete', (guild) => {
 disc_client.on('message', (message) => {
     if(config.test_bot !== undefined && !HPermissions.isDev(message.author)) return;
     if(message.author.bot) return;
-    if(!message.content.startsWith("..\\")) return;
+    if(!message.content.startsWith("!-!")) return;
     let command = message.content.substr(3);
     let args = message.content.split(" ");
     command = args[0].substr(3);
